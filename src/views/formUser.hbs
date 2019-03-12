@@ -1,0 +1,70 @@
+<div class="container">
+  <h1>Información Personal</h1>
+<!-- formulario datos generales -->
+  <div class="row">
+    <div class="col-7">
+
+      <form action="/registroUser" method="POST">
+        <div class="form-group">
+          <label for="nombre">Nombre :</label>
+          <input name="name" type="text" class="form-control" id="nombre"  placeholder="Enter email"
+          value="{{name}}">
+        </div>
+
+        <div class="form-group">
+          <label for="apellido">Apellido :</label>
+          <input name="apellido" type="text" class="form-control" id="apellido" placeholder="Apellido"
+          value="{{apellido}}">
+        </div>
+
+        <div class="form-group">
+          <label for="">Sexo</label>
+          <div class="radio">
+            <label><input type="radio" name="sexo" value="F" >Mujer</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="sexo" value="M">Hombre</label>
+          </div>
+          <br>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email :</label>
+          <input name="email" type="email" class="form-control" id="email" placeholder="E-mail"
+          value="{{email}}">
+        </div>
+
+        <div class="form-group">
+          <label for="contrasena">Contraseña :</label>
+          <input name="password" type="password" class="form-control" id="contrasena" placeholder="Password"
+          value="{{password}}">
+        </div>
+
+        <div class="form-group">
+          <label for="celular">Confirmar Contraseña :</label>
+          <input name="confirm_password" type="password" class="form-control" id="celular" placeholder="Password"
+          value="{{confirm_password}}">
+        </div>
+
+        <div class="form-group form-check">
+          <input name="atyc" type="checkbox" class="form-check-input" id="tyc">
+          <label class="form-check-label" for="tyc">Acepto <a href="#">Termino y condiciones</a></label>
+        </div>
+
+        <div class="row py-2">
+          <button class="btn btn-primary mx-auto" type="submit">Registrarme</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-5">
+      <div class="mt-5">
+        <div class="row py-2">
+          <button class="btn btn-primary mx-auto" type="submit" name="button"><i class="fab fa-facebook-square px-2"></i>  Conectate con Facebook</button>
+        </div>
+        <div class="row py-2">
+          <button class="btn btn-primary mx-auto" type="submit" name="button"><i class="fab fa-google px-2"></i>  Conectate con Google</button>
+        </div>
+      </div>
+    </div>
+  </div>

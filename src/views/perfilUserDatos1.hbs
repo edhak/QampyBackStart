@@ -1,0 +1,170 @@
+
+  <div class="row ">
+    {{>navSliderUsers}}
+
+    <div class="col mt-4">
+      <h1>Información Personal</h1>
+      <form action="/perfilUserDatos1" method="POST">
+
+        <!-- <input type="hidden" name="_method" value="PUT"> -->
+
+        <div class="form-group">
+          <label for="nombre">Nombre :</label>
+          <input name="name" type="text" class="form-control" id="nombre" aria-describedby="emailHelp" value="{{name}}" placeholder="Enter nombre">
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+
+        <div class="form-group">
+          <label for="apellido">Apellido :</label>
+          <input name="apellido" type="text" class="form-control" id="apellido" value="{{apellido}}" placeholder="Apellido">
+        </div>
+
+        <div class="form-group">
+          <label for="">Sexo</label>
+          {{#if sexoBool}}
+          <div class="radio">
+            <label><input type="radio" name="sexo" value="F" checked>Mujer</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="sexo" value="M">Hombre</label>
+          </div>
+          {{else}}
+          <div class="radio">
+            <label><input type="radio" name="sexo" value="F" >Mujer</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="sexo" value="M" checked>Hombre</label>
+          </div>
+          {{/if}}
+
+          <br>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email :</label>
+          <input type="email" class="form-control" id="email" value={{email}} placeholder="E-mail" disabled>
+        </div>
+
+        <div class="form-group">
+          <a href="#">Cambiar Contraseña</a>
+        </div>
+
+        <div class="row py-2">
+          <button class="btn btn-primary mx-auto" type="submit">Edición Terminada</button>
+        </div>
+      </form>
+    </div>
+
+
+
+
+
+
+    <div class="col mt-4">
+    <!-- primer card de informacion -->
+      <div class="card">
+        <div class="card-header">
+          Datos Complementarios
+        </div>
+        <div class="card-body">
+
+          <div class="row">
+            <div class="col">
+              <p class="text-right">dni: </p>
+            </div>
+            <div class="col">
+              <p class="text-left">{{dni}}</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <p class="text-right">Estado :</p>
+            </div>
+            <div class="col">
+              <p class="text-left">Casado</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <p class="text-right">Telefono :</p>
+            </div>
+            <div class="col">
+              <p class="text-left">8765432234</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <p class="text-right">Celular :</p>
+            </div>
+            <div class="col">
+              <p class="text-left">34567876543</p>
+            </div>
+          </div>
+
+          <!-- redireccióna a la edición de  datos complementarios que es perfilUserDatos2 -->
+          <a href="/perfilUserDatos2"> Editar</a>
+
+        </div>
+      </div>
+    <!-- fin primer card de informacion -->
+      <hr>
+    <!-- Segundo card de informacion -->
+      <div class="card">
+        <div class="card-header">
+          Datos de Ubicación
+        </div>
+        <div class="card-body">
+
+          <div class="row">
+            <div class="col">
+              <p class="text-right">País: </p>
+            </div>
+            <div class="col">
+              <p class="text-left">Perú</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <p class="text-right">Región:</p>
+            </div>
+            <div class="col">
+              <p class="text-left">Huancavelica</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <p class="text-right">Provincia:</p>
+            </div>
+            <div class="col">
+              <p class="text-left">Huancavelica</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <p class="text-right">Distrito</p>
+            </div>
+            <div class="col">
+              <p class="text-left">Palca</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <p class="text-right">Direccion</p>
+            </div>
+            <div class="col">
+              <p class="text-left">Jr. Cahuide n° 666/ Tupac Amaru</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    <!-- fin Segundo card de información -->
+    </div>
+  </div>

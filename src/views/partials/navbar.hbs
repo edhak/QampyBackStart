@@ -1,0 +1,43 @@
+<!-- inicio navegacion -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+    <a class="navbar-brand" href="/">
+      <img class="w-75 h-75"src="../img/LogoQAMPY1.png" >
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- user es la variable global de que esta en req definida en app.js y que es dada por la atenticacion -->
+        {{#if user}}
+
+        <li class="nav-item px-4 mx-auto">
+          <a class="nav-link" href="/user">Perfil</a>
+        </li>
+        {{else}}
+        <li class="nav-item px-4 mx-auto">
+          <a class="nav-link" href="/login">Ingresa</a>
+        </li>
+        <li class="nav-item px-4 mx-auto">
+          <a class="nav-link" href="/registro">Registro</a>
+        </li>
+        {{/if}}
+
+        <li class="nav-item px-4 mx-auto">
+          <a class="nav-link" href="#">Nosotros</a>
+        </li>
+        <li class="nav-item px-4 mx-auto">
+          <a class="nav-link" href="#">Ayuda</a>
+        </li>
+
+        {{#if user}}
+        <li class="nav-item px-4 mx-auto">
+          <a class="nav-link" href="/salir"><i class="fas fa-door-open"></i>Salir</a>
+        </li>
+        {{/if}}
+      </ul>
+    </div>
+</nav>
+
+<!-- fin navegacion -->

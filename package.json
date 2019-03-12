@@ -1,0 +1,25 @@
+{
+  "name": "qampy1",
+  "version": "1.0.0",
+  "description": "version de prueba 1.0 qampy mejorara tu vida",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon src/app.js"
+  },
+  "author": "Edwin <Qampy>",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "express-session": "^1.15.6",
+    "flash": "^1.1.0",
+    "hbs": "^4.0.3",
+    "mongoose": "^5.4.15",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.10",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}
